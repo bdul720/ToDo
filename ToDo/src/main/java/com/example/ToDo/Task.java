@@ -1,7 +1,6 @@
 package com.example.ToDo;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Table(name="task")
@@ -12,18 +11,20 @@ public class Task {
     private Long id;
     private String title;
     private String details;
-    private Date updateDate;
-    private Date createDate;
+    private String updateDate;
+    private String createDate;
+    private int mode;
 
     public Task() {
     }
 
-    public Task(Long id, String title, String details, Date updateDate, Date createDate) {
+    public Task(Long id, String title, String details, String updateDate, String createDate,int mode) {
         this.id = id;
         this.title = title;
         this.details = details;
         this.updateDate = updateDate;
         this.createDate = createDate;
+        this.mode = mode;
     }
 
     public Long getId() {
@@ -50,19 +51,29 @@ public class Task {
         this.details = details;
     }
 
-    public Date getUpdateDate() {
+    public String getUpdateDate() {
         return updateDate;
     }
 
-    public void setUpdateDate(Date updateDate) {
+    public void setUpdateDate(String updateDate) {
         this.updateDate = updateDate;
     }
 
-    public Date getCreateDate() {
+
+    public String getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Date createDate) {
+    public void setCreateDate(String createDate) {
         this.createDate = createDate;
+    }
+
+
+    public int getMode() {
+        return mode;
+    }
+
+    public void setMode(int mode) {
+        this.mode = mode;
     }
 }

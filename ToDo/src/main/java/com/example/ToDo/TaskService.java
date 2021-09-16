@@ -12,11 +12,25 @@ public class TaskService {
     private TaskRepository taskRepository;
 
     public List<Task> listAll(){
+
         return taskRepository.findAll();
     }
 
     public void save(Task task){
+        java.util.Date dt = new java.util.Date();
+
+        java.text.SimpleDateFormat sdf =
+                new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+        String currentTime = sdf.format(dt);
         taskRepository.save(task);
+
+
+
+        task.setCreateDate(currentTime);
+        task.setUpdateDate(currentTime);
+
+        System.out.print(task.getUpdateDate());
     }
 
     public Task get(long id){
