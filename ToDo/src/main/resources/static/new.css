@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.navbar{
+    height: 80px;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.navbar ul{
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar ul li{
+    list-style: none;
+    margin: 0 8px;
+    display: inline-block;
+    line-height: 80px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+    padding: 6px 13px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: red;
+    transition: .4s;
+}
+
+.navbar ul li a:hover{
+    background: red;
+}
+
+.main{
+    width: 400px;
+    margin: 100px auto 0px auto;
+}
+
+h2{
+    text-align:center;
+    padding:20px;
+    font-family:sans-serif;
+}
+
+.register{
+    background-color:rgba(0,0,0,0.5);
+    width: 100%;
+    font-size:18px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.3);
+    box-shadow:2px 2px 15px rgba(0,0,0,0.3);
+    color:white;
+}
+
+.register form{
+    margin:40px;
+}
+
+label{
+    font-family: sans-serif;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.title input{
+    width:300px;
+}
+
+.details input{
+    width:300px;
+    height:40px;
+}
+
+.username input{
+    width:300px;
+}
+
+.password input{
+    width:300px;
+}
+button{
+    text-decoration: none;
+    text-align:center;
+    color:white;
+    font-size: 20px;
+    padding: 7px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: #00d600;
+    background-color:rgba(0,0,0,0.3);
+    transition: .4s;
+}
+
+button:hover{
+    background: #00d600;
+}

@@ -1,49 +1,68 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Add ToDo</title>
+    <title>Insert ToDo</title>
+    <link rel="stylesheet" type="text/css" href="../new.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<p>Add Test</p>
-    <div align="center">
+    <!--Header-->
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a th:href="@{/logout}">Logout</a>
+            </li>
+        </ul>
+        <!--ADD new-->
+        <ul>
+            <li>
+                <a th:href="@{/back}">Back</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="main">
         <!--Form-->
-        <form action="#" th:action="@{/save}" th:object="${task}" method="post">
-            <div align="left">
-                <tr>
-                    <label>Title</label>
-                    <td>
-                        <input type="hidden" th:field="*{id}"/>
-                        <input type="text" th:field="*{title}" placeholder="Title">
-                    </td>
-                </tr>
-            </div>
+        <div class="register">
+            <form th:action="@{/save}" th:object="${task}" method="post">
+                <h2>Register Here</h2>
+                <!--ID-->
+                <input type="hidden" th:field="*{id}"/>
+                <!--Title-->
+                <div class="title">
+                    <label>Title:</label>
+                    <br>
+                    <input type="text" th:field="*{title}" placeholder="Title">
+                </div>
 
-            <!--Details-->
-            <div align="left">
-                <tr>
-                    <label>Details</label>
-                    <td>
-                        <input type="text" th:field="*{details}" placeholder="Details" />
-                    </td>
-                </tr>
-            </div>
+                <!--Details-->
+                <div class="details">
+                    <br>
+                    <label>Details:</label>
+                    <br>
+                    <input type="text" th:field="*{details}" placeholder="Details" />
+                </div>
 
-            <!--Mode-->
-            <div align="left">
-                <tr>
-                    <label>Mode</label>
-                    <td>
-                        <input type="text" th:field="*{mode}" placeholder="Mode" />
-                    </td>
-                </tr>
-            </div>
+                <!--Mode-->
+                <br><br>
+                <label>Mode:</label>
+                <br>
+                <input type="radio" th:field="*{mode}" value="ToDo"/>
+                <span id="todo">ToDo</span>
+                &nbsp;&nbsp;&nbsp;
+                <input type="radio" th:field="*{mode}" value="Doing"/>
+                <span id="doing">Doing</span>
+                &nbsp;&nbsp;&nbsp;
+                <input type="radio" th:field="*{mode}" value="Done"/>
+                <span id="done">Done</span>
+                <br><br>
+                <div align="center" class="submitButton">
+                    <button type="submit">Submit</button>
+                </div>
 
-            <td colspan="2">
-                <button type="submit">Save</button>
-            </td>
-
-        </form>
+            </form>
+        </div>
     </div>
 </body>
 </html>

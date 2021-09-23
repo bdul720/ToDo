@@ -9,12 +9,6 @@
     background: rgba(0,0,0,0.4);
 }
 
-.logo{
-    width: 140px;
-    height: auto;
-    padding: 20px 100px;
-}
-
 .navbar ul{
     float: right;
     margin-right: 20px;
@@ -42,21 +36,85 @@
     background: #00d600;
 }
 
-table{
-    width: 75%;
+.tableBody{
+    height:100%;
+    width:100%;
+    font-faily:Mukta, serif;
+    display:grid;
+    justify-content:center;
+    align:center;
 }
 
-.edit td ul li a{
+table{
+    width:100%;
+    border-collapse:collapse;
+    box-shadow:0 5px 10px #525252;
+    background-color:#ffffff;
+    text-align:left;
+    overflow:hidden;
+}
+
+table thead{
+    box-shadow:0 5px 10px #525252;
+}
+
+table thead th{
+    padding:1rem 2rem;
+    text-transform:uppercase;
+    letter-spacing:0.1rem;
+    font-size:0.7rem;
+    font-weight:900;
+}
+
+td{
+    padding: 1rem 2rem;
+}
+
+tr:nth-child(even){
+    background-color:#e8e8e8;
+}
+
+.edit a{
     text-decoration: none;
-    color:white;
-    font-size: 20px;
-    padding: 6px 13px;
+    color:black;
+    padding: 0.2rem 1rem;
     border-style: solid;
     border-radius: 2px;
-    border-color: #00d600;
+    border-color: #000000;
     transition: .4s;
 }
 
-.edit td ul li a:hover{
-    background: #00d600;
+.edit a:hover{
+    border-color: #00d600;
+    background-color:#00d600;
+}
+
+.details a{
+    text-decoration: none;
+    color:black;
+    padding: 0.2rem 1rem;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: #000000;
+    transition: .4s;
+}
+
+.details a:hover{
+    border-color: #ffde24;
+    background-color:#ffde24;
+}
+
+.delete a{
+    text-decoration: none;
+    color:black;
+    padding: 0.2rem 1rem;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: #000000;
+    transition: .4s;
+}
+
+.delete a:hover{
+    border-color: #ff5252;
+    background-color:#ff5252;
 }

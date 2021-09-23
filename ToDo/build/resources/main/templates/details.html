@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+<!--Header-->
+<nav class="navbar">
+    <ul>
+        <li>
+            <a th:href="@{/logout}">Logout</a>
+        </li>
+    </ul>
+    <!--ADD new-->
+    <ul>
+        <li>
+            <a th:href="@{/back}">Back</a>
+        </li>
+    </ul>
+</nav>
+
+<!--Table-->
+<div class="tableBody">
+    <table>
+        <!--Table Head-->
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Details</th>
+            <th>Status</th>
+            <th>Create Date</th>
+            <th>Update Date</th>
+        </tr>
+        </thead>
+        <!--Table Body-->
+        <tbody>
+        <tr th:each="task : ${task}">
+            <td th:text="${task.id}">ID</td>
+            <td th:text="${task.title}">Title</td>
+            <td th:text="${task.details}">Details</td>
+            <td th:text="${task.mode}">Status</td>
+            <td th:text="${task.createDate}">Create Date</td>
+            <td th:text="${task.updateDate}">Update Date</td>
+        </tr>
+        </tbody>
+
+    </table>
+</div>
+</body>
+</html>
